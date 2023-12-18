@@ -77,7 +77,7 @@ function App() {
       },
     });
 
-    idRef.current++;
+    idRef.current++;  
   };
 
   const onUpdate = (targetId, date, content, emotionId) => {
