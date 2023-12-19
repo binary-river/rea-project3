@@ -3,10 +3,15 @@ import Header from "../component/Header";
 import Button from "../component/Button";
 import Editor from "../component/Editor";
 import { DiaryDispatchContext } from "../App";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import {setPageTitle} from "../util";
 
 
 const New = () => {
+
+    useEffect(()=>{
+        setPageTitle("Diary New");
+    },[])
 
     const {onCreate} = useContext(DiaryDispatchContext);
 

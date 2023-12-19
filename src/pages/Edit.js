@@ -3,10 +3,15 @@ import Button from "../component/Button";
 import Header from "../component/Header";
 import Editor from "../component/Editor";
 import useDiary from "../hooks/useDiary";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DiaryDispatchContext } from "../App";
+import { setPageTitle } from "../util";
 
 const Edit = () => {
+
+    useEffect(()=>{
+        setPageTitle("Diary Edit");
+    },[])
 
     const {id} = useParams();
     const {onUpdate, onDelete} = useContext(DiaryDispatchContext);

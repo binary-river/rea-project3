@@ -4,8 +4,15 @@ import { getFormattedDate } from "../util";
 import Header from "../component/Header";
 import Button from "../component/Button";
 import Viewer from "../component/Viewer";
+import {setPageTitle} from "../util";
+import {useEffect} from "react";
 
 const Diary = () => {
+
+    useEffect(()=>{
+        setPageTitle("Diary View");
+    },[])
+
     const {id} = useParams();
     const data = useDiary(id);
 
